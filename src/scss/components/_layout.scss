@@ -1,10 +1,10 @@
 .section {
-  margin: 150px 0 0 0;
+  padding: 100px 0 0 0;
 }
 .section-container {
   width: 100%;
   max-width: 1200px;
-  margin: 150px auto 0 auto;
+  margin: 0 auto;
   padding: 0 50px;
 }
 .section-header {
@@ -43,8 +43,8 @@
 }
 
 @media screen and (max-width: 576px) {
-  .section-container {
-    padding: 0 15px;
+  .section {
+    padding: 60px 15px;
   }
   .section-title {
     position: relative;
