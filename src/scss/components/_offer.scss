@@ -1,0 +1,229 @@
+.offer-article {
+  color: $color1;
+}
+.offer-article-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 25px 0;
+}
+.offer-article-text {
+  margin: 0 0 50px 0;
+}
+
+//offer list 
+
+.offer-list {
+  display: flex;
+  justify-content: center;
+}
+.offer-list-item {
+  width: calc(33.3% - 40px);
+  margin: 0 20px;
+  background: $color6;
+}
+
+// Offer list header
+
+.item-header {
+  position: relative;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.item-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  height: 30px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.item-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  height: 30px;
+  background: $color4;
+  width: 75%;
+}
+.item-header-title {
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+.item-header-price {
+  font-size: 15px;
+  font-weight: bold;
+}
+.item-price {
+  font-size: 24px;
+}
+.price-badge {
+  position: relative;
+  padding: 0 0 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.price-badge::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 40px;
+  height: 2px;
+  transform: rotate(-20deg);
+}
+
+//Item package
+
+.item-package {
+  color: white;
+  padding: 10px 20px;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+//Item list with offers
+
+.item-list {
+  padding: 20px 10px;
+}
+.item-list li {
+  position: relative;
+  color: $color5;
+  margin: 0 0 15px 15px;
+  font-size: 17px;
+}
+.item-list li::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  font-size: 12px;
+}
+
+//Item footer & additional
+
+.item-additional {
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-weight: bold;
+}
+.item-additional-list li {
+ margin: 0 0 3px 0;
+}
+.item-additional-text {
+  font-size: 17px;
+  margin: 0 0 15px 0;
+}
+.item-footer-rating {
+  background: $color6;
+  padding: 6px 0;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 5px;
+}
+
+//Versions
+
+#basic {
+  .item-header {
+    background: $color2;
+  }
+  .item-header::before {
+    background: $color2;
+  }
+  .item-additional {
+    background: $color2;
+  }
+  .item-footer-rating {
+    color: $color2;;
+  }
+  .item-list li::before {
+    color: $color2;
+  }
+  .price-badge::before {
+    background: $color1;
+  }
+}
+#premium {
+  .item-header {
+    background: $color1;
+  }
+  .item-header::before {
+    background: $color1;
+  }
+  .item-package {
+    background: $color7;
+  }
+  .item-additional {
+    background: $color1;
+  }
+  .item-footer-rating {
+    color: $color1;;
+  }
+  .item-list li::before {
+    color: $color1;
+  }
+  .price-badge::before {
+    background: $color2;
+  }
+}
+#standard {
+  .item-header {
+    background: $color7
+  }
+  .item-header::before {
+    background: $color7
+  }
+  .item-package {
+    background: $color2;
+  }
+  .item-additional {
+    background: $color7
+  }
+  .item-footer-rating {
+    color: $color7;
+  }
+  .item-list li::before {
+    color: $color7
+  }
+  .price-badge::before {
+    background: $color2;
+  }
+}
+
+//Media 
+
+@media screen and (max-width: 920px) {
+  .offer-list {
+    flex-wrap: wrap;
+  }
+  .offer-list-item {
+    width: calc(50% - 40px);
+    margin: 50px 20px;
+    background: $color6;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .offer-list-item {
+    width: calc(100% - 40px);
+    margin: 50px 20px;
+    background: $color6;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .offer-list-item {
+    width: 100%;
+    margin: 50px 0;
+    background: $color6;
+  }
+}
