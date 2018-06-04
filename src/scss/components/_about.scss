@@ -1,0 +1,127 @@
+
+.about-article {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-article-title {
+  color: $color1;
+  font-size: 40px;
+  width: 100%;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+.about-article-text {
+  width: 50%;
+  color: $color1;
+  padding: 0 25px 0 0;
+  text-align: justify;
+}
+.about-article-text:last-of-type {
+  padding: 0 0 0 25px;
+}
+.about-article-line {
+  display: block;
+  height: 4px;
+  background: $color2;
+  width: 100%;
+  margin: 30px 0;
+}
+
+//About content
+.about-content {
+  margin: 0 0 30px 0;
+}
+.about-content-text {
+  color: $color5;
+  font-weight: normal;
+}
+.about-content-text span {
+  color: $color1;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color2;
+  letter-spacing: 1px;
+  font-size: 21px;
+}
+
+//About services 
+
+.about-services {
+  color: $color1;
+  font-weight: bold;
+}
+.about-services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+.about-services-list-tile {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color1;
+}
+.about-services-list-tile p {
+  position: relative;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.about-services-list-tile p::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 80%;
+  height: 3px;
+  background: $color2;
+  margin: 0 auto;
+}
+
+//Media
+
+@media screen and (max-width: 768px) {
+  .about-article-text {
+    width: 100%;
+    padding: 0;
+  }
+  .about-article-text:last-of-type {
+    padding: 15px 0 0 0;
+  }
+  .about-article-title {
+    font-size: 34px;
+  }
+  .about-content-text {
+    text-align: justify;
+  }
+  .about-services-text {
+    text-align: justify;
+  }
+  .about-services-list {
+    margin: 15px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-article-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .about-services-list-tile {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .about-article-title {
+    font-size: 24px;
+  }
+}
