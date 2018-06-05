@@ -30,6 +30,10 @@
 .navigation-logo a {
   display: block;
   height: 100%;
+  outline: none;
+}
+.navigation-logo a:focus {
+  background: $color2-rgb ;
 }
 .navigation-logo svg {
   width: auto;
@@ -228,6 +232,15 @@
   .navigation-button {
     display: block;
   }
+  .navigation-logo svg {
+    margin: 5px 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-logo svg {
+    margin: 5px 0 0 -10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -240,7 +253,8 @@
     align-items: center;
     height: 100%;
   }
+  
   .navigation-logo svg {
-    margin: 5px 0 0 0;
+    margin: 5px 0 0 -20px;
   }
 }
