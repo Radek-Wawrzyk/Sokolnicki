@@ -1,0 +1,49 @@
+
+#advantage {
+  position: relative;
+  padding: 60px 0;
+}
+.advantage-img {
+  background: url("../img/communication.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  width: calc(100% - 50px);
+  height: calc(100vh - 50px);
+  margin: 0 50px 0 50px;
+}
+.advantage-title {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  color: white;
+  background: $color1-rgb;
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase; 
+  padding: 40px 20px 65px 60px;
+  max-width: 420px;
+  width: 100%;
+}
+.advantage-title span {
+  color: $color2;
+}
+
+@media screen and (max-width: 576px) {
+  .advantage-title {
+    font-size: 26px;
+    padding: 20px 15px 40px 25px;
+    bottom: 20px;
+  }
+  .advantage-img {
+    background-position: 50% 40%;
+    width: calc(100% - 15px);
+    margin: 0 0 0 15px;
+    height: calc(100vh - 100px)
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .advantage-title {
+    font-size: 24px;
+  }
+}

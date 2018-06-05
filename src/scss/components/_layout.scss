@@ -8,10 +8,10 @@ body.loaded {
   overflow-y: auto;
 }
 
-//Sectiop
+//Section
 
 .section {
-  padding: 100px 0 0 0;
+  
 }
 .section-container {
   width: 100%;
@@ -24,11 +24,21 @@ body.loaded {
   width: auto;
   margin: 0 0 60px 0;
 }
+.section-header-img  {
+  justify-content: center;
+}
+.section-header-img svg {
+  width: 50%;
+  height: auto;
+}
 .section-header-right {
   justify-content: flex-end;
 }
 .section-header-left {
   justify-content: flex-start;
+}
+.section-header-center {
+  justify-content: center;
 }
 .section-title {
   position: relative;
