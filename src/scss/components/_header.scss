@@ -18,7 +18,8 @@
   bottom: 0;
   background: $color1-rgb;
   color: white;
-  width: 40%;
+  width: 100%;
+  max-width: 540px;
   padding: 40px 20px 60px 20px;
   font-size: 36px;
   text-transform: uppercase;
@@ -33,14 +34,12 @@
 @media screen and (max-width: 1280px) {
   .header-title {
     font-size: 32px;
-    width: 50%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .header-title {
     font-size: 28px;
-    width: 50%;
   }
 }
 
@@ -58,6 +57,10 @@
 @media screen and (max-width: 576px) {
   .header-img {
     background-position: 70% center;
+  }
+  .header-title {
+    left: 20px;
+    width: calc(100% - 20px);
   }
 }
 
