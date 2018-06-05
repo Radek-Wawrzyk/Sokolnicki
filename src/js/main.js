@@ -1,3 +1,18 @@
+//Preloader
+
+window.addEventListener("load", () => {
+  const preloader = document.querySelector("#preloader");
+  const body = document.querySelector("body");
+
+  preloader.classList.add("loaded");
+  body.classList.add("loaded");
+  preloader.addEventListener("transitionend", () => {
+    body.removeChild(preloader);
+  });
+});
+
+//Navitation
+
 const navigation = () => {
 
   const navMenu = document.querySelector(".navigation-right");
@@ -35,7 +50,7 @@ const navigation = () => {
       close();
     }
   };
-}
+};
 
 //Function inits
 navigation();
