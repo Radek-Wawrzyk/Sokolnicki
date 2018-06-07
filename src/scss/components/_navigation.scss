@@ -61,21 +61,21 @@
 
 //Navigation socials
 
-.navigation-social {
+.socials {
   padding: 0 0 0 20px;
   display: flex;
 }
-.navigation-social li {
+.socials li {
   margin: 0 4px;
 }
-.navigation-social li a {
+.socials li a {
   display: block;
   padding: 4px 4px;
   border: 1px solid $color1;
   border-radius: 100%;
   transition: border 0.25s;
 }
-.navigation-social li a span {
+.socials li a span {
   border: 1px solid $color1;
   border-radius: 100%;
   display: block;
@@ -86,20 +86,20 @@
   background-color: $color1;
   transition: background-color 0.25s;
 }
-.navigation-social li a:hover, .navigation-social li a:focus  {
+.socials li a:hover, .socials li a:focus  {
   border-color: $color2;
   outline: none;
 }
-.navigation-social li a:hover span, .navigation-social li a:focus  span  {
+.socials li a:hover span, .socials li a:focus  span  {
   background-color: $color2;          
 }
-.navigation-social li:nth-child(1) span {
+.socials li:nth-child(1) span {
   mask-image: url("../img/facebook.svg");
 }
-.navigation-social li:nth-child(2) span {
+.socials li:nth-child(2) span {
   mask-image: url("../img/instagram.svg");
 }
-.navigation-social li:nth-child(3) span {
+.socials li:nth-child(3) span {
   mask-image: url("../img/twitter.svg");
 }
 
@@ -223,7 +223,7 @@
     flex-direction: column;
     width: 100%;
   }
-  .navigation-social {
+  .navigation-socials {
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -253,7 +253,6 @@
     align-items: center;
     height: 100%;
   }
-  
   .navigation-logo svg {
     margin: 5px 0 0 -20px;
   }
