@@ -38,15 +38,22 @@
 
 //Media
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1440px) {
   .success-article-text {
     font-size: 26px;
+  }
+  #success {
+    height: 90vh;
   }
 }
 
 @media screen and (max-width: 1280px) {
+
   .success-article-text {
-    font-size: 23px;
+    font-size: 22px;
+  }
+  .success-article {
+    padding: 30px;
   }
 }
 
@@ -54,9 +61,6 @@
   .success-article-text {
     font-size: 20px;
     text-align: center;
-  }
-  .success-article {
-    padding: 30px;
   }
 }
 

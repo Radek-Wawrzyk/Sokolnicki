@@ -1,49 +1,54 @@
 
 #advantage {
   position: relative;
-  padding: 60px 0 100px 0;
   display: flex;
-  justify-content: flex-end;
+  padding: 60px 0;
 }
 .advantage-img {
   background: url("../img/communication.jpg");
   background-size: cover;
   background-position: center 40%;
-  width: calc(60% - 50px);
-  height: calc(70vh - 50px);
-  position: relative;
+  width: 50%;
+  height: 80vh;
+}
+.advantage-article {
+  width: 50%;
+  background: $color1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .advantage-title {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
   color: white;
-  background: rgba(47, 47, 131, 0.45);
   font-weight: bold;
   font-size: 36px;
   text-transform: uppercase; 
-  padding: 40px 20px 65px 60px;
-  max-width: 420px;
-  width: 100%;
-}
-.advantage-title::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  bottom: -50px;
-  width: calc(100% + 50px);
-  height: calc(100% + 50px);
-  background: $color1;
-  z-index: -1;
 }
 .advantage-title span {
   color: $color2;
 }
 
+//Media
+
+@media screen and (max-width: 920px) {
+  .advantage-title {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .advantage-title {
     font-size: 28px;
-    padding: 20px 15px 20px 10px;
+  }
+  #advantage {
+    flex-wrap: wrap;
+  }
+  .advantage-img {
+    width: 100%;
+  }
+  .advantage-article {
+    width: 100%;
+    padding: 50px 0;
   }
 }
 
@@ -53,25 +58,14 @@
   }
   .advantage-title {
     font-size: 26px;
-    padding: 20px 15px 20px 10px;
   }
   .advantage-img {
     background-position: 50% 40%;
-    width: calc(90% - 50px);
-  }
-  .advantage-title::before {
-    left: -25px;
-    bottom: -25px;
-    width: calc(100% + 25px);
-    height: calc(100% + 25px);
   }
 }
 
 @media screen and (max-width: 420px) {
   .advantage-title {
     font-size: 24px;
-  }
-  .advantage-img {
-    width: calc(95% - 50px);
   }
 }
