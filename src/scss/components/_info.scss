@@ -26,13 +26,15 @@
   white-space: nowrap;
 }
 .info-diagram-item::before {
-  content: "\00b0";
-  position: absolute;
-  left: -30px;
-  top: -8px;
-  font-size: 60px;
-  font-weight: 100;
-  color: $color1;
+  content: "";
+  position: absolute; 
+  width: 15px;
+  height: 15px;
+  left: -30px; 
+  top: 2px; 
+  border: 2px solid $color1;
+  border-radius: 100%;
+  color: $color1; 
 }
 .info-diagram-item::after {
   content: "";
@@ -44,12 +46,12 @@
   background: $color1;
 }
 .info-diagram-item span {
-  position: absolute;
-  left: -19px;
-  bottom: -42px;
-  width: 35px;
-  height: 2px;
-  background: $color1;
+  position: absolute; 
+  left: -19px; 
+  bottom: -42px; 
+  width: 30px; 
+  height: 2px; 
+  background: $color1; 
 }
 .info-diagram-item:last-of-type span {
   display: none;
@@ -91,9 +93,9 @@
   background: $color1;
   color: white;
   padding: 20px 15px;
-  font-weight: bold;
+  font-size: 26px;
   text-align: right;
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
   margin: 50px 0 0 -50px;
 }
@@ -119,14 +121,15 @@
     }
   }
   .info-diagram-item span {
-    width: 15px;
+    width: 10px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .info-help {
     margin: 0 0 0 -15px;
-    max-width: 200px;
+    max-width: 300px;
+    font-size: 20px;
   }
 }
 
@@ -136,11 +139,9 @@
     white-space: normal;
   }
   .info-diagram-item span {
-    position: absolute;
-    left: -19px;
-    bottom: -42px;
-    width: 15px;
-    height: 2px;
-    background: $color1;
+    width: 12px;
+  }
+  .info-help {
+    max-width: 250px;
   }
 }
