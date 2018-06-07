@@ -1,3 +1,142 @@
 #communication {
   padding: 60px 0;
 }
+.communication-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+//Communication header
+
+.section-communication-header {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  padding: 30px 15px 60px 15px;
+}
+.section-communication-header img {
+  width: 100%;
+  height: auto;
+}
+
+//Communication img 
+
+.communication-img {
+  position: relative;
+  background: url("../img/author.jpg");
+  background-size: cover;
+  background-position: center 50%;
+  width: 60%;
+  height: 70vh;
+}
+.communication-img::before {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 40%;
+  height: 100%;
+  background: $color1;
+  z-index: -1;
+}
+.communication-img::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: calc(100% - 50px);
+  background: rgba(47, 47, 131, 0.3);
+  z-index: 1;
+}
+
+//Communication article
+
+.communication-article {
+  margin: 40px 0;
+}
+.communication-article-color {
+  color: $color2;
+}
+.communication-article-text {
+  text-align: justify;
+}
+.communication-end-text img {
+  width: auto;
+  height: 20px;
+  margin: 0 0 -5px 0;
+  display: none;
+}
+
+//communication end
+
+.communication-end {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.communication-end-img {
+  width: 200px;
+  height: auto;
+  margin: 0 25px 0 0;
+}
+.communication-end-text {
+  background: $color1;
+  color: white;
+  font-weight: bold;
+  padding: 20px 15px;
+  text-align: justify;
+}
+
+//Media
+
+@media screen and (max-width: 920px) {
+  .communication-end-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .communication-container  {
+    padding: 0 25px;
+  }
+  .communication-img {
+    background-position: 40% 50%;
+  }
+  .communication-end-img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .communication-container  {
+    padding: 0 15px;
+  }
+  .communication-img {
+    background-position: 30% 50%;
+    width: calc(90% - 50px);
+  }
+  .communication-img::after {
+    right: -25px;
+    height: calc(100% - 25px);
+  }
+  .communication-img::before {
+    right: -25px;
+    top: -25px;
+  }
+  .communication-end-img {
+    display: none;
+  }
+  .communication-end-text {
+    background: white;
+    color: $color1;
+  }
+  .communication-end-text img {
+    display: inline-block;
+  }
+  .communication-end-text {
+    padding: 20px 0;
+  }
+}

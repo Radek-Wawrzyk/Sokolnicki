@@ -10,9 +10,6 @@ body.loaded {
 
 //Section
 
-.section {
-  
-}
 .section-container {
   width: 100%;
   max-width: 1200px;
@@ -27,9 +24,10 @@ body.loaded {
 .section-header-img  {
   justify-content: center;
 }
-.section-header-img svg {
-  width: 50%;
+.section-header-img svg, .section-header-img img {
+  width: 100%;
   height: auto;
+  display: block;
 }
 .section-header-right {
   justify-content: flex-end;
@@ -58,6 +56,19 @@ body.loaded {
   background: white;
 }
 
+//Big letter 
+
+.big-letter {
+  color: #2f2f83;
+  font-size: 80px;
+  text-transform: uppercase;
+  float: left;
+  display: inline;
+  margin: -22px 10px -35px 0;
+  font-weight: bold;
+}
+
+
 @media screen and (max-width: 768px) {
   .section-container {
     padding: 0 25px;
@@ -84,5 +95,9 @@ body.loaded {
     width: 50px;
     height: 10px;
     background: white;
+  }
+  .big-letter {
+    font-size: 46px;
+    margin: -10px 10px -20px 0;
   }
 }
