@@ -40,6 +40,13 @@
   color: $color2;
 }
 
+@media screen and (max-width: 768px) {
+  .advantage-title {
+    font-size: 28px;
+    padding: 20px 15px 20px 10px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   #advantage {
     padding: 60px 0 0 0;

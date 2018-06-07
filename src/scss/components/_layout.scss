@@ -10,11 +10,15 @@ body.loaded {
 
 //Section
 
+.section {
+  position: relative;
+  padding: 60px 50px;
+}
+
 .section-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 50px;
 }
 .section-header {
   display: flex;
@@ -70,7 +74,7 @@ body.loaded {
 
 
 @media screen and (max-width: 768px) {
-  .section-container {
+  .section {
     padding: 0 25px;
   }
 }

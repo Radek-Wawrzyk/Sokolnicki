@@ -1,0 +1,146 @@
+#info .section-title {
+  text-align: center;
+}
+
+//Info img
+
+.info-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.info-img img {
+  width: 100%;
+  height: auto;
+}
+
+//Info diagram
+
+.info-diagram {
+  padding: 50px 15px;
+}
+.info-diagram-item {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  white-space: nowrap;
+}
+.info-diagram-item::before {
+  content: "\00b0";
+  position: absolute;
+  left: -30px;
+  top: -8px;
+  font-size: 60px;
+  font-weight: 100;
+  color: $color1;
+}
+.info-diagram-item::after {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 20px;
+  height: 45px;
+  width: 2px;
+  background: $color1;
+}
+.info-diagram-item span {
+  position: absolute;
+  left: -19px;
+  bottom: -42px;
+  width: 35px;
+  height: 2px;
+  background: $color1;
+}
+.info-diagram-item:last-of-type span {
+  display: none;
+}
+.info-diagram-item:last-of-type::after {
+  display: none;
+}
+.info-diagram-item:nth-child(odd) {
+  color: $color2;
+}
+@for $i from 1 through 5 {
+  .info-diagram-item:nth-child(#{$i}) {
+    margin: 25px 0 25px #{$i*40}px;
+  }
+}
+
+//Info article
+
+.info-article {
+  margin: 25px 0;
+}
+.info-article-text {
+  text-align: justify;
+}
+.info-article-color-1,
+.info-article-color-2 {
+  font-weight: bold;
+}
+.info-article-color-1 {
+  color: $color2;
+}
+.info-article-color-2 {
+  color: $color1;
+}
+
+//Info help {
+
+.info-help {
+  background: $color1;
+  color: white;
+  padding: 20px 15px;
+  font-weight: bold;
+  text-align: right;
+  max-width: 300px;
+  width: 100%;
+  margin: 50px 0 0 -50px;
+}
+
+//Media
+
+@media screen and (max-width: 768px) {
+  .info-help {
+    margin: 0 0 0 -25px;
+  }
+  .info-diagram {
+    padding: 25px 0;
+  }
+  .info-diagram-item {
+    font-size: 18px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+  @for $i from 1 through 5 {
+    .info-diagram-item:nth-child(#{$i}) {
+      margin: 25px 0 25px #{$i*20}px;
+    }
+  }
+  .info-diagram-item span {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .info-help {
+    margin: 0 0 0 -15px;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-diagram-item {
+    font-size: 16px;
+    white-space: normal;
+  }
+  .info-diagram-item span {
+    position: absolute;
+    left: -19px;
+    bottom: -42px;
+    width: 15px;
+    height: 2px;
+    background: $color1;
+  }
+}
