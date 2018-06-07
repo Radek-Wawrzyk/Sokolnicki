@@ -36,17 +36,14 @@
   color: $color5;
   font-weight: normal;
 }
-.logo-text {
-  color: $color7;
-  text-transform: uppercase;
-  border-bottom: 1px solid $color2;
-  letter-spacing: 0.5px;
-  font-size: 21px;
-  font-weight: 100;
+.about-content-text svg {
+  width: 150px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  margin: -10px 0 -20px -20px;
 }
-.logo-color {
-  color: $color2;
-}
+
 
 //About services 
 
@@ -114,6 +111,9 @@
 @media screen and (max-width: 576px) {
   .about-article-title {
     font-size: 28px;
+  }
+  .about-content-text svg {
+    margin: -12px 0 -30px -20px;
   }
 }
 
