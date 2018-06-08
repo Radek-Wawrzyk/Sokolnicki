@@ -1,10 +1,11 @@
+//Reset CSS
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
 //Settings
 @import "./components/typography";
 @import "./components/settings";
 
 //Components
-@import "./components/preloader";
 @import "./components/layout";
 @import "./components/navigation";
 @import "./components/header";
