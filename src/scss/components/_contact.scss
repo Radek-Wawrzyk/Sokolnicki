@@ -1,0 +1,49 @@
+#contact {
+  padding: 60px 0;
+}
+#contact .section-header {
+  padding: 0 15px;
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+}
+.contact-tile {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 10px;
+  text-align: center;
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.23);
+  padding: 0 0 50px 0;
+}
+.contact-tile-title {
+  color: $color1;
+  padding: 25px 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0,0,0,0.13);
+}
+.contact-tile-text {
+  color: $color2;
+  padding: 8px 15px;
+}
+.contact-tile-text:first-of-type {
+  padding: 25px 15px 8px 15px;
+}
+
+//Media
+
+@media screen and (max-width: 768px) {
+  .contact-info {
+    flex-wrap: wrap;
+  }
+  .contact-tile {
+    width: 100%;
+    margin: 20px 0;
+  }
+  #contact {
+    padding: 60px 0 0 0;
+  }
+  #contact .section-container {
+    padding: 60px 15px 0 15px;
+  }
+}
