@@ -59,8 +59,36 @@
   outline-color: $color2;
 }   
 
-//Navigation socials
+.socials {
+  padding: 0 0 0 20px;
+  display: flex;
+}
+.socials li {
+  margin: 0 4px;
+}
+.socials li a {
+  display: block;
+  padding: 4px;
+  border: 1px solid $color1;   
+  border-radius: 50%;   
+  transition: border 0.25s;
+  outline-color: $color2;
+}
+.socials li svg {
+  width: 15px;
+  height: 15px;
+  transition: all 0.25s;
+  fill: $color1;
+}
+.socials li a:hover, .socials li a:focus {
+  border-color: $color2;
+}
+.socials li a:hover svg, .socials li a:focus svg {
+  fill: $color2;
+}
 
+//Navigation socials
+/*
 .socials {
   padding: 0 0 0 20px;
   display: flex;
@@ -102,6 +130,8 @@
 .socials li:nth-child(3) span {
   mask-image: url("../img/twitter.svg");
 }
+*/
+
 
 //Navigation Button 
 
