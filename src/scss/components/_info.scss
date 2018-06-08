@@ -2,16 +2,46 @@
   text-align: center;
 }
 
-//Info img
+//Info tiles
 
-.info-img {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.info-img img {
+.info-tiles-img {
+  max-width: 450px;
   width: 100%;
   height: auto;
+  margin: 0 auto 50px auto;
+  display: block;
+}
+
+.info-tiles {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.info-tiles-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.info-tile {
+  width: 33.3%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  background: $color4;
+}
+.info-tile:nth-child(odd) {
+  background: white;
+  color: black;
+}
+.info-tile:nth-child(2) {
+  background: $color1;
+  color: white;
+}
+.info-tile-text {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 //Info diagram
@@ -102,6 +132,12 @@
 
 //Media
 
+@media screen and (max-width: 920px) {
+  .info-tile {
+    height: 250px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .info-help {
     margin: 0 0 0 -25px;
@@ -123,6 +159,9 @@
   .info-diagram-item span {
     width: 10px;
   }
+  .info-tile {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -130,6 +169,22 @@
     margin: 0 0 0 -15px;
     max-width: 300px;
     font-size: 20px;
+  }
+  .info-tile {
+    height: 200px;
+    width: 50%;
+  }
+  .info-tile:nth-child(3n+1) {
+    background: $color4;
+  }
+  .info-tile:nth-child(2) {
+    background: $color1;
+  }
+  .info-tile:nth-child(5) {
+    background: $color4;
+  }
+  .info-tile:nth-child(6) {
+    background: white;
   }
 }
 
@@ -143,5 +198,22 @@
   }
   .info-help {
     max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .info-tile {
+    height: 230px;
+    width: 100%
+  }
+  .info-tile:nth-child(2) {
+    background: $color1;
+    color: white;
+  }
+  .info-tile:nth-child(5) {
+    background: white;
+  }
+  .info-tile:nth-child(6) {
+    background: $color4;
   }
 }
