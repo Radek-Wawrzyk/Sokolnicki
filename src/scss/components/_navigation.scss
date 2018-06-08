@@ -69,8 +69,7 @@
 .socials li a {
   display: block;
   padding: 4px;
-  border: 1px solid $color1;   
-  border-radius: 50%;   
+  border: 2px solid $color1;   
   transition: border 0.25s;
   outline-color: $color2;
 }
@@ -86,52 +85,6 @@
 .socials li a:hover svg, .socials li a:focus svg {
   fill: $color2;
 }
-
-//Navigation socials
-/*
-.socials {
-  padding: 0 0 0 20px;
-  display: flex;
-}
-.socials li {
-  margin: 0 4px;
-}
-.socials li a {
-  display: block;
-  padding: 4px 4px;
-  border: 1px solid $color1;
-  border-radius: 100%;
-  transition: border 0.25s;
-}
-.socials li a span {
-  border: 1px solid $color1;
-  border-radius: 100%;
-  display: block;
-  width: 15px;
-  height: 15px;
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  background-color: $color1;
-  transition: background-color 0.25s;
-}
-.socials li a:hover, .socials li a:focus  {
-  border-color: $color2;
-  outline: none;
-}
-.socials li a:hover span, .socials li a:focus  span  {
-  background-color: $color2;          
-}
-.socials li:nth-child(1) span {
-  mask-image: url("../img/facebook.svg");
-}
-.socials li:nth-child(2) span {
-  mask-image: url("../img/instagram.svg");
-}
-.socials li:nth-child(3) span {
-  mask-image: url("../img/twitter.svg");
-}
-*/
-
 
 //Navigation Button 
 
