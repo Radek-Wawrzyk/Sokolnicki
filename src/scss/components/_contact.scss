@@ -1,12 +1,15 @@
 #contact {
-  padding: 60px 0;
+  padding: 0;
 }
 #contact .section-header {
-  padding: 0 15px;
+  padding: 60px 15px;
 }
 .contact-info {
   display: flex;
   justify-content: center;
+  background: $color2;
+  padding: 0 0 100px 0;
+  margin: 100px 0 0 0;
 }
 .contact-tile {
   max-width: 500px;
@@ -15,6 +18,8 @@
   text-align: center;
   box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.23);
   padding: 0 0 50px 0;
+  background: white;
+  margin: -80px 10px 0 10px;
 }
 .contact-tile-title {
   color: $color1;
@@ -23,11 +28,11 @@
   border-bottom: 1px solid rgba(0,0,0,0.13);
 }
 .contact-tile-text {
-  color: $color2;
+  color: $color1;
   padding: 8px 15px;
 }
 .contact-tile-text a {
-  outline-color: $color2;
+  outline-color: $color1;
   padding: 2px 4px;
 }
 .contact-tile-text:first-of-type {
@@ -39,10 +44,11 @@
 @media screen and (max-width: 768px) {
   .contact-info {
     flex-wrap: wrap;
+    padding: 0 15px 0px 15px;
   }
   .contact-tile {
     width: 100%;
-    margin: 20px 0;
+    margin: -50px 0 75px 0;
   }
   #contact {
     padding: 60px 0 0 0;
