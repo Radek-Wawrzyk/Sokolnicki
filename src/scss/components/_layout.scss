@@ -12,18 +12,20 @@ body.loaded {
 
 .section {
   position: relative;
-  padding: 60px 50px;
+  
 }
-
 .section-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 60px 50px;
 }
 .section-header {
   display: flex;
   width: auto;
-  margin: 0 0 60px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 }
 .section-header-img  {
   justify-content: center;
@@ -74,13 +76,13 @@ body.loaded {
 
 
 @media screen and (max-width: 768px) {
-  .section {
+  .section-container {
     padding: 60px 25px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .section {
+  .section-container {
     padding: 60px 15px;
   }
   .section-title {

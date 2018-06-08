@@ -1,6 +1,9 @@
 #info .section-title {
   text-align: center;
 }
+#info {
+  padding: 60px 0 60px 0;
+}
 
 //Info tiles
 
@@ -11,7 +14,6 @@
   margin: 0 auto 50px auto;
   display: block;
 }
-
 .info-tiles {
   width: 100%;
   max-width: 1000px;
@@ -47,56 +49,43 @@
 //Info diagram
 
 .info-diagram {
-  padding: 50px 15px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin: 100px 0;
+}
+.info-diagram-img {
+  width: 50%;
+  background: url("../img/contact.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  height: 80vh;
+}
+.info-diagram-text {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: $color4;
 }
 .info-diagram-item {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   position: relative;
-  white-space: nowrap;
-}
-.info-diagram-item::before {
-  content: "";
-  position: absolute; 
-  width: 15px;
-  height: 15px;
-  left: -30px; 
-  top: 2px; 
-  border: 2px solid $color1;
-  border-radius: 100%;
-  color: $color1; 
-}
-.info-diagram-item::after {
-  content: "";
-  position: absolute;
-  left: -19px;
-  top: 20px;
-  height: 45px;
-  width: 2px;
-  background: $color1;
-}
-.info-diagram-item span {
-  position: absolute; 
-  left: -19px; 
-  bottom: -42px; 
-  width: 30px; 
-  height: 2px; 
-  background: $color1; 
-}
-.info-diagram-item:last-of-type span {
-  display: none;
-}
-.info-diagram-item:last-of-type::after {
-  display: none;
+  margin: 25px 0;
+  color: $color1;
 }
 .info-diagram-item:nth-child(odd) {
   color: $color2;
 }
-@for $i from 1 through 5 {
-  .info-diagram-item:nth-child(#{$i}) {
-    margin: 25px 0 25px #{$i*40}px;
-  }
+.info-diagram-item::before {
+  content: "-";
+  position: absolute; 
+  left: -15px;
+  top: 0px;
 }
+
 
 //Info article
 
@@ -132,9 +121,21 @@
 
 //Media
 
+@media screen and (max-width: 1200px) {
+  .info-diagram-text {
+    padding: 50px 20px;
+  }
+  .info-diagram-item {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 920px) {
   .info-tile {
     height: 250px;
+  }
+  .info-diagram-item {
+    font-size: 20px;
   }
 }
 
@@ -142,25 +143,25 @@
   .info-help {
     margin: 0 0 0 -25px;
   }
+  .info-tile {
+    height: 200px;
+  }
   .info-diagram {
-    padding: 25px 0;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+  .info-diagram-text, .info-diagram-img {
+    width: 100%;
+  }
+  .info-diagram-text {
+    justify-content: center;
+    padding: 15px 15px 15px 30px;
   }
   .info-diagram-item {
     font-size: 18px;
-    height: 24px;
-    display: flex;
-    align-items: center;
   }
-  @for $i from 1 through 5 {
-    .info-diagram-item:nth-child(#{$i}) {
-      margin: 25px 0 25px #{$i*20}px;
-    }
-  }
-  .info-diagram-item span {
-    width: 10px;
-  }
-  .info-tile {
-    height: 200px;
+  .info-diagram-img {
+    height: 50vh;
   }
 }
 
@@ -189,13 +190,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .info-diagram-item {
-    font-size: 16px;
-    white-space: normal;
-  }
-  .info-diagram-item span {
-    width: 12px;
-  }
   .info-help {
     max-width: 250px;
   }
