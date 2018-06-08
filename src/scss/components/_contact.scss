@@ -26,6 +26,10 @@
   color: $color2;
   padding: 8px 15px;
 }
+.contact-tile-text a {
+  outline-color: $color2;
+  padding: 2px 4px;
+}
 .contact-tile-text:first-of-type {
   padding: 25px 15px 8px 15px;
 }

@@ -18,6 +18,7 @@ const navigation = () => {
   const navMenu = document.querySelector(".navigation-right");
   const navBtn = document.querySelector(".navigation-button");
   const navLink = document.querySelectorAll(".navigation-menu li a");
+  const logoLink = document.querySelector(".navigation-logo a");
 
   navBtn.addEventListener("click", () => {
     navBtn.classList.toggle("active");
@@ -30,6 +31,12 @@ const navigation = () => {
       aria = "false";
     }
     navBtn.setAttribute("aria-expanded", aria);
+  });
+
+  logoLink.addEventListener("click", () => {
+    if (navBtn.classList.contains("active")) {
+      close();
+    }
   });
 
   const close = () => {
