@@ -1,0 +1,24 @@
+
+[data-animation] {
+  opacity: 0;
+  overflow: hidden;
+  transition-duration : 1s;
+}
+[data-animation-duration] {
+  transition-duration: 1s;
+}
+[data-animation].animation-init {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+//Animation types
+
+[data-animation="fade-up"] {
+  transform: translate3d(0,-100px,0);
+}
+[data-animation="fade-down"] {
+  transform: translate3d(0,100px,0);
+}

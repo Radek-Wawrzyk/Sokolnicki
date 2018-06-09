@@ -59,5 +59,43 @@ const navigation = () => {
   };
 };
 
+//Animate element when show
+
+const animation = () => {
+
+  const offset = (element) => {
+    element = element.getBoundingClientRect();
+    return {
+      top: element.top + window.scrollY
+    }
+  };
+  
+  const animate_element = document.querySelectorAll(".animate");
+
+  const scroll_function = () => {
+    let window_height = window.scrollY;
+  
+    for (let i=0;i<animate_element.length; i++) {
+  
+      let scroll_position = offset(animate_element[i]).top - 800;
+      let animation_duration = animate_element[i].getAttribute("data-animation-duration");
+      let animation_type = animate_element[i].getAttribute("data-animation-type");
+  
+      if (window_height > scroll_position ) {
+        animate_element[i].classList.add("animation-init");
+        animate_element[i].style.transitionDuration = ""+animation_duration+"s",
+        animate_element[i].style.transitionTimingFunction = ""+animation_type+"";
+      }
+      else {
+        
+      }
+    }
+  };
+  
+  window.addEventListener("scroll", scroll_function);
+}
+
+
 //Function inits
 navigation();
+animation();
