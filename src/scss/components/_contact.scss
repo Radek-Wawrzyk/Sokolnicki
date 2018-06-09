@@ -30,10 +30,30 @@
 .contact-tile-text {
   color: $color1;
   padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-tile-text svg {
+  width: 20px;
+  height: 20px;
+  fill: $color1;
+  margin: 0 5px 0 0;
+  transition: fill 0.25s;
 }
 .contact-tile-text a {
-  outline-color: $color1;
+  outline-color: $color2;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s;
+}
+.contact-tile-text a:hover, .contact-tile-text a:focus {
+  color: $color2;
+}
+.contact-tile-text a:hover svg, 
+.contact-tile-text a:focus svg {
+  fill: $color2;
 }
 .contact-tile-text:first-of-type {
   padding: 25px 15px 8px 15px;
@@ -55,5 +75,14 @@
   }
   #contact .section-container {
     padding: 60px 15px 0 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact-tile-text {
+    font-size: 14.5px;
+  }
+  .contact-tile-title {
+    font-size: 20px;
   }
 }
