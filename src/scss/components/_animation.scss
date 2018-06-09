@@ -1,7 +1,6 @@
 
 [data-animation] {
   opacity: 0;
-  overflow: hidden;
   transition-duration : 1s;
 }
 [data-animation-duration] {
@@ -18,7 +17,9 @@
 
 [data-animation="fade-up"] {
   transform: translate3d(0,-100px,0);
+  transition-property: transform, opacity;
 }
 [data-animation="fade-down"] {
   transform: translate3d(0,100px,0);
+  transition-property: transform, opacity;
 }
