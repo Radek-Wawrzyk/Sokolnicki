@@ -77,7 +77,7 @@ const animation = () => {
   
     for (let i=0;i<animate_element.length; i++) {
   
-      let scroll_position = offset(animate_element[i]).top - 800;
+      let scroll_position = offset(animate_element[i]).top - 700;
       let animation_duration = animate_element[i].getAttribute("data-animation-duration");
       let animation_type = animate_element[i].getAttribute("data-animation-type");
   
