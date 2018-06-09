@@ -19,16 +19,18 @@
 .success-article-text {
   color: white;
   text-align: justify;
-  text-transform: uppercase;
+  
   font-weight: bold;
   font-size: 30px;
 }
 .success-article-text span {
   color: $color2;
+  text-transform: uppercase;
 }
 .success-article-backgrond {
   background: white;
-  padding: 2px 1px;
+  color: $color1 !important;
+  padding: 2px 3px;
 }
 .success-article-img {
   width: 300px;
@@ -93,5 +95,14 @@
   }
   .success-article-text {
     font-size: 16px;
+  }
+  .success-article-img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .success-article-img {
+    width: 200px;
   }
 }
