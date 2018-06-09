@@ -170,30 +170,36 @@
     max-width: 300px;
     font-size: 18px;
   }
+  .info-tiles {
+    margin: 50px 0;
+  }
   .info-tile {
     height: 250px;
     width: 100%;
   }
-  .info-tile:nth-child(3n+1) {
-    background: $color4;
-  }
   .info-tile:nth-child(1) {
-    order: 1
+    order: 1;
+    background: $color2;
+    color: white;
   }
   .info-tile:nth-child(2) {
-    order: 2;
+    order: 3;
     background: $color1;
+    color: white;
   }
   .info-tile:nth-child(3) {
-    order: 3
+    order: 2;
+    background: $color4;
+    color: black;
   }
   .info-tile:nth-child(4) {
     order: 4;
-    background: white;
+    background: $color2;
+    color: white;
   }
   .info-tile:nth-child(5) {
     order: 3;
-    background: $color4;
+    background: white;
   }
   .info-tile:nth-child(6) {
     order: 6;
@@ -201,7 +207,8 @@
   }
   .info-tile:nth-child(7) {
     order: 7;
-    background: white;
+    background: $color1;
+    color: white;
   }
 }
 
