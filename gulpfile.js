@@ -101,7 +101,8 @@ gulp.task('html', () => {
     .pipe(htmlMin({
       sortAttributes: true,
       sortClassName: true,
-      collapseWhitespace: true
+      collapseWhitespace: true,
+      minifyCSS: true
     }))
     .pipe(gulp.dest(config.dist))
 });
