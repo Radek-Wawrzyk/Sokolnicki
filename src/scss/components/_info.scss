@@ -1,13 +1,6 @@
 
 //Info tiles
 
-.info-tiles-img {
-  max-width: 450px;
-  width: 100%;
-  height: auto;
-  margin: 100px auto;
-  display: block;
-}
 .info-tiles {
   width: 100%;
   max-width: 1000px;
@@ -17,6 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
 .info-tile {
   width: 33.3%;
@@ -29,6 +23,22 @@
 }
 .info-tile-img {
   padding: 0 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 0;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  margin: -3px 0 0 0;
+}
+.info-tiles-img {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  margin: 0 10px;
+  display: block;
 }
 .info-tile:last-of-type {
   background: $color4;
@@ -40,6 +50,18 @@
 .info-tile:nth-child(2) {
   background: $color1;
   color: white;
+}
+.info-tile:nth-child(2) {
+  background: $color1;
+  color: white;
+}
+.info-tile:nth-child(6) {
+  background: white;
+  color: black;
+}
+.info-tile:nth-child(7) {
+  background: $color4;
+  color: black;
 }
 .info-tile-text {
   text-transform: uppercase;
@@ -133,6 +155,9 @@
   .info-tile {
     height: 250px;
   }
+  .info-tile-img {
+    height: auto;
+  }
   .info-diagram-item {
     font-size: 20px;
   }
@@ -144,6 +169,9 @@
   }
   .info-tile {
     height: 200px;
+  }
+  .info-tile-img {
+    height: auto;
   }
   .info-diagram {
     flex-wrap: wrap;
@@ -176,6 +204,15 @@
   .info-tile {
     height: 250px;
     width: 100%;
+  }
+  .info-tile-img {
+    position: static;
+    transform: translate(0,0);
+    padding: 0 15px;
+    margin: 0;
+  }
+  .info-tiles-img {
+    margin: 0;
   }
   .info-tile:nth-child(1) {
     order: 1;
