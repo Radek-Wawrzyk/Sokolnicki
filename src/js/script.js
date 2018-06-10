@@ -17,7 +17,7 @@ const navigation = () => {
 
   const navMenu = document.querySelector(".navigation-right");
   const navBtn = document.querySelector(".navigation-button");
-  const navLink = document.querySelectorAll(".navigation-menu li a");
+  const navLink = document.querySelectorAll(".navigation-menu-link");
   const logoLink = document.querySelector(".navigation-logo a");
 
   navBtn.addEventListener("click", () => {
@@ -45,11 +45,23 @@ const navigation = () => {
     navMenu.classList.remove("active");
   };
 
-  for (let i = 0; navLink.length > i; i++) {
-    navLink[i].addEventListener("click", () => {
-      close();
-    });
-  }
+  document.addEventListener('click', () => {
+    if (!event.target.classList.contains("navigation-menu-link")) {
+      return;
+    } 
+
+    event.target.classList.add('active');
+    
+    for (let i = 0; i < navLink.length; i++) {
+      if (navLink[i] === event.target) {
+        continue;
+      }
+      if (navBtn.classList.contains("active")) {
+        close();
+      }   
+      navLink[i].classList.remove('active');
+    }
+  }, false);
 
   document.onkeydown = (e) => {
     e = e || window.event;
@@ -57,6 +69,42 @@ const navigation = () => {
       close();
     }
   };
+
+  function scrollIt(element) {  
+    window.scrollTo({
+      'behavior': 'smooth',
+      'left': 0,
+      'top': element.offsetTop
+    });
+  };
+  
+  const sections = document.querySelectorAll('.section');
+  const header = document.querySelector('.header');
+  
+  logoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollIt(header);
+  });
+
+  navLink[0].addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollIt(sections[0]);
+  });
+  
+  navLink[1].addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollIt(sections[1]);
+  });
+  
+  navLink[2].addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollIt(sections[3]);
+  });
+  
+  navLink[3].addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollIt(sections[6]);
+  });
 };
 
 //Animate element when show
@@ -70,21 +118,21 @@ const animation = () => {
     }
   };
   
-  const animate_element = document.querySelectorAll(".animate");
+  const animateElement = document.querySelectorAll(".animate");
 
-  const scroll_function = () => {
-    let window_height = window.scrollY;
+  const scrollFunction = () => {
+    let windowHeight = window.scrollY;
   
-    for (let i=0;i<animate_element.length; i++) {
+    for (let i = 0; i < animateElement.length; i++) {
   
-      let scroll_position = offset(animate_element[i]).top - 700;
-      let animation_duration = animate_element[i].getAttribute("data-animation-duration");
-      let animation_type = animate_element[i].getAttribute("data-animation-type");
+      let scrollPosition = offset(animateElement[i]).top - 700;
+      let animationDuration = animateElement[i].getAttribute("data-animation-duration");
+      let animationType = animateElement[i].getAttribute("data-animation-type");
   
-      if (window_height > scroll_position ) {
-        animate_element[i].classList.add("animation-init");
-        animate_element[i].style.transitionDuration = ""+animation_duration+"s",
-        animate_element[i].style.transitionTimingFunction = ""+animation_type+"";
+      if (windowHeight > scrollPosition ) {
+        animateElement[i].classList.add("animation-init");
+        animateElement[i].style.transitionDuration = ""+animationDuration+"s",
+        animateElement[i].style.transitionTimingFunction = ""+animationType+"";
       }
       else {
         
@@ -92,7 +140,7 @@ const animation = () => {
     }
   };
   
-  window.addEventListener("scroll", scroll_function);
+  window.addEventListener("scroll", scrollFunction);
 }
 
 
